@@ -1,71 +1,95 @@
-# 🎥 AI Slidder – ИИ-интерпретатор креативного контента
+🎥 AI Slidder – AI Interpreter of Creative Content
+📌 Description
 
-## 📌 Описание
-**AI Slidder** — это интеллектуальный агент, который:
-- Принимает **аудио/видео/ссылку** от пользователя через Telegram-бота.
-- Выполняет **транскрибацию речи в текст** с помощью [Whisper](https://github.com/openai/whisper).
-- Создает **резюме (summary)** на основе текста (поддержка русского и английского).
-- Автоматически генерирует **красивую презентацию (PPTX)** на основе транскрипта и резюме с использованием **Presenton API** или локальной версии.
+AI Slidder is an intelligent agent that:
 
-## ⚙️ Стек технологий
-- **Python 3.11**
-- [Telegram Bot API](https://core.telegram.org/bots/api)  
-- [FastAPI](https://fastapi.tiangolo.com/) + **ngrok** для локального хостинга  
-- [OpenAI Whisper](https://github.com/openai/whisper) (GPU ускорение на Colab/Kaggle/Docker)  
-- [Transformers (HuggingFace)](https://huggingface.co/docs/transformers) для суммаризации текста  
-- [Presenton](https://presenton.ai) – генерация презентаций  
+Accepts audio, video, or links from users via a Telegram bot
 
-## 🚀 Возможности
-- Поддержка **аудио и видео файлов** (mp3, mp4, wav и др.)
-- Работа по ссылке (YouTube, Telegram file link и т.д.)
-- Автоматическое **распознавание языка транскрипта**
-- Возможность выбрать:
-  - Количество слайдов
-  - Язык презентации
-- Выдача результата в виде:
-  - `Транскрипта`
-  - `Резюме`
-  - `Скачиваемой презентации PPTX`
+Performs speech-to-text transcription using Whisper
 
-## 🖼️ Демонстрация
-📌 Интерфейс Telegram-бота:  
+Generates a summary based on the transcript (supports both Russian and English)
+
+Automatically creates a beautiful PPTX presentation using the transcript and summary via Presenton API or a local generator
+
+⚙️ Tech Stack
+
+Python 3.11
+
+Telegram Bot API
+
+FastAPI
+ + ngrok for local hosting
+
+OpenAI Whisper
+ (GPU acceleration on Colab/Kaggle/Docker)
+
+Transformers (HuggingFace)
+ for text summarization
+
+Presenton API for presentation generation
+
+🚀 Features
+
+Supports audio and video files (mp3, mp4, wav, etc.)
+
+Works with external links (YouTube, Telegram file links, etc.)
+
+Automatic language detection inside the transcript
+
+Ability to choose:
+
+Number of slides
+
+Presentation language
+
+Output includes:
+
+Transcript
+
+Summary
+
+Downloadable PPTX presentation
+
+🖼️ Demonstration
+📌 Telegram bot interface:  
 ![alt text](image.png)
 
-📌 Пример слайдов презентации:  
+📌 Sample presentation slides:  
 ![alt text](image-1.png)
 ![alt text](image-2.png)
 ![alt text](image-3.png)
 
-## 🔧 Установка и запуск
-1. Клонируем репозиторий:
-   ```bash
-   git clone https://github.com/AbylaiSekerbek7/AI_Slidder_Hack_Shai
-   cd bot
+🔧 Installation & Launch
 
-2. Создаем файл .env и добавляем туда ключи:
-    ```bash
-    TELEGRAM_TOKEN=ваш_токен_бота
-    COLAB_API_BASE=ваш_сервер_Colab/ngrok
-    PRESENTON_API_KEY=ваш_api_ключ
+Clone the repository:
 
-3. Запускаем бота:
-    ```bash
-    python bot.py
+git clone https://github.com/AbylaiSekerbek7/AI_Slidder_Hack_Shai
+cd bot
 
-🏗️ Архитектура
-Telegram Bot  →  FastAPI (ngrok)  →  Whisper (GPU)  →  Summarizer  →  Presenton API
 
-📈 Потенциал и интеграции
+Create a .env file and add your API keys:
 
-Интеграция с корпоративными API (Zoom, CRM, ERP)
+TELEGRAM_TOKEN=your_telegram_bot_token
+COLAB_API_BASE=your_colab_or_ngrok_url
+PRESENTON_API_KEY=your_presenton_api_key
 
-Возможность добавления next-best-action подсказок
 
-Масштабируемость через Docker и Kubernetes
+Run the bot:
 
-👨‍💻 Авторы
+python bot.py
 
-Команда AI Slidder Hack Team 🚀
+🏗️ Architecture
 
-Abylaikhan Sekerbek
+Telegram Bot → FastAPI (ngrok) → Whisper (GPU) → Summarizer → Presenton API
+
+📈 Potential & Integrations
+
+Integration with corporate APIs (Zoom, CRM, ERP)
+
+Ability to add next-best-action recommendations
+
+Scalable using Docker and Kubernetes
+
+👨‍💻 Author
+
 Amirlan Sarsenov
