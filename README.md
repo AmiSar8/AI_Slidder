@@ -92,4 +92,4 @@ Scalable using Docker and Kubernetes
 
 👨‍💻 Author
 
-Amirlan Sarsenov
+Amirlan Sarsenov, Abylaikhan Sekerbek 
